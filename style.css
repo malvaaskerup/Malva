@@ -1,0 +1,81 @@
+@font-face {
+    font-family: Akzi;
+    src: url(AkzidenzGroteskBE-Regular.otf);
+}
+
+@font-face {
+    font-family: FT;
+    src: url(FT88-Gothique.otf);
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: darkblue;
+}
+span{
+    color: black;
+    font-family: Akzi;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+}
+
+.title{
+    position: relative;
+    top: .075em;
+    margin: 1em max(5vw, 20px);
+    font-family: FT;
+    /* font-size: min(45px, 10vw); */
+    font-size: max(32px,0.0385 * (100vw - max(5vw, 20px)));
+    line-height: 1.35em;
+    text-align: center;
+}
+
+.wrapper{
+    padding: 0;
+    margin:0;
+    width: 100vw;
+    min-height: calc(100vh - max(32px,0.0385 * (100vw - max(5vw, 20px))));
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden; */
+}
+
+.box {
+    position: relative;
+    /* margin-bottom: 1.5em; */
+    margin: 0 max(5vw, 20px) max(5vw, 20px);
+    padding: 1em;
+
+    /* width: min(90%, 100% - 40px);
+    width: calc(100% - 40px); */
+    min-height: calc(100vh - max(5vw, 20px)
+         - 4.35 * max(32px,0.0385 * (100vw - max(5vw, 20px))));
+
+    line-height: 1.625em;
+    /* background-color: darkblue; */
+    background-color: white;
+    border: solid 2px black;
+
+    display:block;
+    /* overflow: scroll; */
+}
+.box:after {
+    position: absolute;
+    bottom: calc(-20px - 20px);
+    left: 50%;
+    font-family: Akzi;
+    content: 'curated by malva askerup';
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 480px) {
+    .title nobr { white-space: normal }
+}
+
+@media screen and (max-width: 1000px) {
+    .title { text-align: left }
+}
